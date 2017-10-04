@@ -16,7 +16,7 @@
     </ul>
     @endif
     
-        {!! Form::model (	
+    {!! Form::model (	
         $task,	
         ['route'=>['tasks.create'], 	
         'method' => 'get']) 	
