@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
     <h1>id : {{$task->id}}のタスク詳細</h1>
-    <p>{{$task->content}}</p>
+    <p>ステータス：{{ $task->status }}</p> 
+    <p>タスク内容：{{ $task->content }}</p>
     
     <!--{!! link_to_route('tasks.edit', 'タスク編集' ,['id'=>$task->id]) !!}-->
 

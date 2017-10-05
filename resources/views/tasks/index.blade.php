@@ -10,7 +10,8 @@
                  $task->id, 
                  ['id' => $task->id]) 
                  !!} :
-                 {{ $task->content }}
+                【{{ $task->status }}】 
+                {{ $task->content }}
              </li>
         @endforeach
     </ul>
