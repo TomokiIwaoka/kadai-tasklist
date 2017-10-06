@@ -25,14 +25,8 @@
                 </tbody>
               </table>
             @endif
-
-	            {!! Form::model (	
-                $tasks,	
-                ['route'=>['tasks.create'], 	
-                'method' => 'get']) 	
-            !!}	
-            {!! Form::submit('create', ['class'=>'btn btn-primary']) !!}	
-            {!! Form::close() !!}	
+            
+             {!! link_to_route('tasks.create', 'create', null, ['class' => 'btn btn-primary']) !!}
 
         </div>
     </div>
