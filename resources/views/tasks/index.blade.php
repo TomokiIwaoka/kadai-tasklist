@@ -26,13 +26,7 @@
               </table>
             @endif
 
-            {!! Form::model (	
-                $task,	
-                ['route'=>['tasks.create'], 	
-                'method' => 'get']) 	
-            !!}	
-            {!! Form::submit('create', ['class'=>'btn btn-primary']) !!}	
-            {!! Form::close() !!}	
+	
         </div>
     </div>
 
