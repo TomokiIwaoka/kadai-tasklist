@@ -12,8 +12,12 @@
 */
 
 /* Add routing for tasklist project 2017/10/4*/
-Route::get('/','TasksController@index');
-Route::resource('tasks','TasksController');
+/* Change route from TasksController to WelcomeController & Add Auth Middleware*/
+Route::get('/','WelcomeController@index');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('tasks','TasksController');
+});
 
 //ユーザー登録
 Route::get('signup', 'Auth\AuthController@getRegister')->name('signup.get');

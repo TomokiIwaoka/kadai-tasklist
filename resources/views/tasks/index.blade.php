@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    
+
     <h1>タスク一覧</h1>
     
     <div class = "row">
@@ -22,10 +22,12 @@
                       <td>{{ $task->content }}</td>
                     <tr>
                   @endforeach
+                      
                 </tbody>
               </table>
+              {!! $tasks->render() !!}
             @endif
-            
+
              {!! link_to_route('tasks.create', 'create', null, ['class' => 'btn btn-primary']) !!}
 
         </div>
